@@ -1,0 +1,13 @@
+sudo: required
+
+services:
+  - docker
+
+script:
+  - VERSION=$(cat rust/version)
+  - docker build -t tensaibankai/rust:${VERSION} -t tensaibankai/rust:latest rust/
+deploy:
+  provider: script
+  script: bash ci/deploy.sh
+  on:
+    branch: master
