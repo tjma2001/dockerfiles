@@ -7,7 +7,7 @@ script:
   - VERSION=$(cat rust/VERSION)
   - docker build -t tensaibankai/rust:${VERSION} -t tensaibankai/rust:latest rust/
   - VERSION=$(cat node/VERSION)
-  - docker build -t tensaibankai/node:${VERSION} -t tensaibankai/node:latest rust/
+  - docker build -t tensaibankai/node:${VERSION} -t tensaibankai/node:latest node/
 deploy:
   provider: script
   script: bash ci/deploy.sh
