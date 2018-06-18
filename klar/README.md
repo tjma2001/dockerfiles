@@ -1,0 +1,1 @@
+Dockerised version of https://github.com/optiopay/klar
