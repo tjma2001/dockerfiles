@@ -1,0 +1,1 @@
+Must set environment variable GOOGLE_APPLICATION_CREDENTIALS before running
