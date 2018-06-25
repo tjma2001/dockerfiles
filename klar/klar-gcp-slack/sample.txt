@@ -1,0 +1,158 @@
+clair timeout 1m0s
+docker timeout: 1m0s
+no whitelist file
+Analysing 12 layers
+Failed to analyze using API v1: push image https://gcr.io/v2/root-platform/root-platform:latest to Clair failed: can't even read an error message: invalid character 'N' looking for beginning of value
+
+Got results from Clair API v3
+Found 297 vulnerabilities
+Unknown: 18
+Negligible: 71
+Low: 93
+Medium: 91
+High: 24
+
+CVE-2017-10663: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The sanity_check_ckpt function in fs/f2fs/super.c in the Linux kernel before 4.12.4 does not validate the blkoff and segno arrays, which allows local users to gain privileges via unspecified vectors.
+https://security-tracker.debian.org/tracker/CVE-2017-10663
+-----------------------------------------
+CVE-2013-7445: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The Direct Rendering Manager (DRM) subsystem in the Linux kernel through 4.x mishandles requests for Graphics Execution Manager (GEM) objects, which allows context-dependent attackers to cause a denial of service (memory consumption) via an application that processes graphics data, as demonstrated by JavaScript code that creates many CANVAS elements for rendering by Chrome or Firefox.
+https://security-tracker.debian.org/tracker/CVE-2013-7445
+-----------------------------------------
+CVE-2017-9984: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The snd_msnd_interrupt function in sound/isa/msnd/msnd_pinnacle.c in the Linux kernel through 4.11.7 allows local users to cause a denial of service (over-boundary access) or possibly have unspecified other impact by changing the value of a message queue head pointer between two kernel reads of that value, aka a "double fetch" vulnerability.
+https://security-tracker.debian.org/tracker/CVE-2017-9984
+-----------------------------------------
+CVE-2017-1000379: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The Linux Kernel running on AMD64 systems will sometimes map the contents of PIE executable, the heap or ld.so to where the stack is mapped allowing attackers to more easily manipulate the stack. Linux Kernel version 4.11.5 is affected.
+https://security-tracker.debian.org/tracker/CVE-2017-1000379
+-----------------------------------------
+CVE-2017-5972: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The TCP stack in the Linux kernel 3.x does not properly implement a SYN cookie protection mechanism for the case of a fast network connection, which allows remote attackers to cause a denial of service (CPU consumption) by sending many TCP SYN packets, as demonstrated by an attack against the kernel-3.10.0 package in CentOS Linux 7. NOTE: third parties have been unable to discern any relationship between the GitHub Engineering finding and the Trigemini.c attack code.
+https://security-tracker.debian.org/tracker/CVE-2017-5972
+-----------------------------------------
+CVE-2018-1093: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The ext4_valid_block_bitmap function in fs/ext4/balloc.c in the Linux kernel through 4.15.15 allows attackers to cause a denial of service (out-of-bounds read and system crash) via a crafted ext4 image because balloc.c and ialloc.c do not validate bitmap block numbers.
+https://security-tracker.debian.org/tracker/CVE-2018-1093
+-----------------------------------------
+CVE-2017-9985: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The snd_msndmidi_input_read function in sound/isa/msnd/msnd_midi.c in the Linux kernel through 4.11.7 allows local users to cause a denial of service (over-boundary access) or possibly have unspecified other impact by changing the value of a message queue head pointer between two kernel reads of that value, aka a "double fetch" vulnerability.
+https://security-tracker.debian.org/tracker/CVE-2017-9985
+-----------------------------------------
+CVE-2017-10662: [High] 
+Found in: linux [3.16.56-1+deb8u1]
+Fixed By: 
+The sanity_check_raw_super function in fs/f2fs/super.c in the Linux kernel before 4.11.1 does not validate the segment count, which allows local users to gain privileges via unspecified vectors.
+https://security-tracker.debian.org/tracker/CVE-2017-10662
+-----------------------------------------
+CVE-2016-7167: [High] 
+Found in: curl [7.38.0-4+deb8u11]
+Fixed By: 
+Multiple integer overflows in the (1) curl_escape, (2) curl_easy_escape, (3) curl_unescape, and (4) curl_easy_unescape functions in libcurl before 7.50.3 allow attackers to have unspecified impact via a string of length 0xffffffff, which triggers a heap-based buffer overflow.
+https://security-tracker.debian.org/tracker/CVE-2016-7167
+-----------------------------------------
+CVE-2018-6954: [High] 
+Found in: systemd [215-17+deb8u7]
+Fixed By: 
+systemd-tmpfiles in systemd through 237 mishandles symlinks present in non-terminal path components, which allows local users to obtain ownership of arbitrary files via vectors involving creation of a directory and a file under that directory, and later replacing that directory with a symlink. This occurs even if the fs.protected_symlinks sysctl is turned on.
+https://security-tracker.debian.org/tracker/CVE-2018-6954
+-----------------------------------------
+CVE-2016-2774: [High] 
+Found in: isc-dhcp [4.3.1-6+deb8u3]
+Fixed By: 
+ISC DHCP 4.1.x before 4.1-ESV-R13 and 4.2.x and 4.3.x before 4.3.4 does not restrict the number of concurrent TCP sessions, which allows remote attackers to cause a denial of service (INSIST assertion failure or request-processing outage) by establishing many sessions.
+https://security-tracker.debian.org/tracker/CVE-2016-2774
+-----------------------------------------
+CVE-2018-6797: [High] 
+Found in: perl [5.20.2-3+deb8u11]
+Fixed By: 
+An issue was discovered in Perl 5.18 through 5.26. A crafted regular expression can cause a heap-based buffer overflow, with control over the bytes written.
+https://security-tracker.debian.org/tracker/CVE-2018-6797
+-----------------------------------------
+CVE-2016-2779: [High] 
+Found in: util-linux [2.25.2-6]
+Fixed By: 
+runuser in util-linux allows local users to escape to the parent session via a crafted TIOCSTI ioctl call, which pushes characters to the terminal's input buffer.
+https://security-tracker.debian.org/tracker/CVE-2016-2779
+-----------------------------------------
+CVE-2017-12424: [High] 
+Found in: shadow [1:4.2-3+deb8u4]
+Fixed By: 
+In shadow before 4.5, the newusers tool could be made to manipulate internal data structures in ways unintended by the authors. Malformed input may lead to crashes (with a buffer overflow or other memory corruption) or other unspecified behaviors. This crosses a privilege boundary in, for example, certain web-hosting environments in which a Control Panel allows an unprivileged user account to create subaccounts.
+https://security-tracker.debian.org/tracker/CVE-2017-12424
+-----------------------------------------
+CVE-2017-1000408: [High] 
+Found in: glibc [2.19-18+deb8u10]
+Fixed By: 
+A memory leak in glibc 2.1.1 (released on May 24, 1999) can be reached and amplified through the LD_HWCAP_MASK environment variable. Please note that many versions of glibc are not vulnerable to this issue if patched for CVE-2017-1000366.
+https://security-tracker.debian.org/tracker/CVE-2017-1000408
+-----------------------------------------
+CVE-2018-1000001: [High] 
+Found in: glibc [2.19-18+deb8u10]
+Fixed By: 
+In glibc 2.26 and earlier there is confusion in the usage of getcwd() by realpath() which can be used to write before the destination buffer leading to a buffer underflow and potential code execution.
+https://security-tracker.debian.org/tracker/CVE-2018-1000001
+-----------------------------------------
+CVE-2014-9761: [High] 
+Found in: glibc [2.19-18+deb8u10]
+Fixed By: 
+Multiple stack-based buffer overflows in the GNU C Library (aka glibc or libc6) before 2.23 allow context-dependent attackers to cause a denial of service (application crash) or possibly execute arbitrary code via a long argument to the (1) nan, (2) nanf, or (3) nanl function.
+https://security-tracker.debian.org/tracker/CVE-2014-9761
+-----------------------------------------
+CVE-2018-6485: [High] 
+Found in: glibc [2.19-18+deb8u10]
+Fixed By: 
+An integer overflow in the implementation of the posix_memalign in memalign functions in the GNU C Library (aka glibc or libc6) 2.26 and earlier could cause these functions to return a pointer to a heap area that is too small, potentially leading to heap corruption.
+https://security-tracker.debian.org/tracker/CVE-2018-6485
+-----------------------------------------
+CVE-2017-16997: [High] 
+Found in: glibc [2.19-18+deb8u10]
+Fixed By: 
+elf/dl-load.c in the GNU C Library (aka glibc or libc6) 2.19 through 2.26 mishandles RPATH and RUNPATH containing $ORIGIN for a privileged (setuid or AT_SECURE) program, which allows local users to gain privileges via a Trojan horse library in the current working directory, related to the fillin_rpath and decompose_rpath functions. This is associated with misinterpretion of an empty RPATH/RUNPATH token as the "./" directory. NOTE: this configuration of RPATH/RUNPATH for a privileged program is apparently very uncommon; most likely, no such program is shipped with any common Linux distribution.
+https://security-tracker.debian.org/tracker/CVE-2017-16997
+-----------------------------------------
+CVE-2016-9841: [High] 
+Found in: zlib [1:1.2.8.dfsg-2]
+Fixed By: 
+inffast.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact by leveraging improper pointer arithmetic.
+https://security-tracker.debian.org/tracker/CVE-2016-9841
+-----------------------------------------
+CVE-2016-9843: [High] 
+Found in: zlib [1:1.2.8.dfsg-2]
+Fixed By: 
+The crc32_big function in crc32.c in zlib 1.2.8 might allow context-dependent attackers to have unspecified impact via vectors involving big-endian CRC calculation.
+https://security-tracker.debian.org/tracker/CVE-2016-9843
+-----------------------------------------
+CVE-2017-8421: [High] 
+Found in: binutils [2.25-5+deb8u1]
+Fixed By: 
+The function coff_set_alignment_hook in coffcode.h in Binary File Descriptor (BFD) library (aka libbfd), as distributed in GNU Binutils 2.28, has a memory leak vulnerability which can cause memory exhaustion in objdump via a crafted PE file. Additional validation in dump_relocs_in_section in objdump.c can resolve this.
+https://security-tracker.debian.org/tracker/CVE-2017-8421
+-----------------------------------------
+CVE-2014-9939: [High] 
+Found in: binutils [2.25-5+deb8u1]
+Fixed By: 
+ihex.c in GNU Binutils before 2.26 contains a stack buffer overflow when printing bad bytes in Intel Hex objects.
+https://security-tracker.debian.org/tracker/CVE-2014-9939
+-----------------------------------------
+CVE-2017-14062: [High] 
+Found in: libidn [1.29-1+deb8u2]
+Fixed By: 
+Integer overflow in the decode_digit function in puny_decode.c in Libidn2 before 2.0.4 allows remote attackers to cause a denial of service or possibly have unspecified other impact.
+https://security-tracker.debian.org/tracker/CVE-2017-14062
+-----------------------------------------
