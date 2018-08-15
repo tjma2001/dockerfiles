@@ -1,7 +1,7 @@
 FROM debian:stable-slim
 
 WORKDIR /usr/src
-
+RUN mkdir -p /usr/share/man/man1
 RUN apt-get update
 RUN apt-get install -y wget xz-utils git android-sdk
 RUN wget https://storage.googleapis.com/flutter_infra/releases/beta/linux/flutter_linux_v0.5.1-beta.tar.xz
