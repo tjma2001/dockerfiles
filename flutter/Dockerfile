@@ -14,4 +14,4 @@ RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip \
     && unzip sdk-tools-linux-4333796.zip \
     && cp -a tools/bin/* /usr/lib/android-sdk/tools/bin/ \
     && rm -rf tools sdk-tools-linux-4333796.zip
-run flutter doctor 2>1
+run flutter doctor 2>&1
