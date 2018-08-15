@@ -5,10 +5,13 @@ services:
 
 script:
   - VERSION=$(cat rust/VERSION)
+  - docker pull tensaibankai/rust
   - docker build -t tensaibankai/rust:${VERSION} -t tensaibankai/rust:latest rust/
   - VERSION=$(cat node/VERSION)
+  - docker pull tensaibankai/node
   - docker build -t tensaibankai/node:${VERSION} -t tensaibankai/node:latest node/
   - VERSION=$(cat flutter/VERSION)
+  - docker pull tensaibankai/flutter
   - docker build -t tensaibankai/flutter:${VERSION} -t tensaibankai/flutter:latest flutter/
 deploy:
   provider: script
