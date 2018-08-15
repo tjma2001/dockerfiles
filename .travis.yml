@@ -5,15 +5,18 @@ services:
 
 script:
   - VERSION=$(cat rust/VERSION)
-  - docker build --cache-from tensaibankai/rust:${VERSION} \
-    -t tensaibankai/rust:${VERSION} \
+  - > 
+    docker build --cache-from tensaibankai/rust:${VERSION} 
+    -t tensaibankai/rust:${VERSION} 
     -t tensaibankai/rust:latest rust/
   - VERSION=$(cat node/VERSION)
-  - docker build --cache-from tensaibankai/node:${VERSION} \
-    -t tensaibankai/node:${VERSION} \
+  - >
+    docker build --cache-from tensaibankai/node:${VERSION} 
+    -t tensaibankai/node:${VERSION} 
     -t tensaibankai/node:latest node/
   - VERSION=$(cat flutter/VERSION)
-  - docker build --cache-from tensaibankai/rust:${VERSION} \
+  - >
+    docker build --cache-from tensaibankai/rust:${VERSION} 
     -t tensaibankai/flutter:${VERSION} 
     -t tensaibankai/flutter:latest flutter/
 deploy:
