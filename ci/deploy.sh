@@ -12,4 +12,4 @@ docker push tensaibankai/node:latest
 
 VERSION=$(cat flutter/VERSION)
 docker push tensaibankai/flutter:${VERSION}
-docker push tensaibankai/flutter:latest
+docker push tensaibankai/flutter
