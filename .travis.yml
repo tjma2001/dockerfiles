@@ -8,6 +8,8 @@ script:
   - docker build -t tensaibankai/rust:${VERSION} -t tensaibankai/rust:latest rust/
   - VERSION=$(cat node/VERSION)
   - docker build -t tensaibankai/node:${VERSION} -t tensaibankai/node:latest node/
+  - VERSION=$(cat flutter/VERSION)
+  - docker build -t tensaibankai/flutter:${VERSION} -t tensaibankai/flutter:latest flutter/
 deploy:
   provider: script
   script: bash ci/deploy.sh

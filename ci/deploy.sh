@@ -9,3 +9,7 @@ docker push tensaibankai/rust:latest
 VERSION=$(cat node/VERSION)
 docker push tensaibankai/node:${VERSION}
 docker push tensaibankai/node:latest
+
+VERSION=$(cat flutter/VERSION)
+docker push tensaibankai/flutter:${VERSION}
+docker push tensaibankai/flutter:latest
