@@ -9,4 +9,9 @@ RUN tar xf flutter_linux_v0.5.1-beta.tar.xz
 RUN mv flutter /usr/lib
 RUN rm flutter_linux_v0.5.1-beta.tar.xz
 ENV PATH="/usr/lib/flutter/bin:${PATH}"
-RUN flutter doctor
+
+RUN wget https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip \
+    && unzip sdk-tools-linux-4333796.zip \
+    && cp -a tools/bin/* /usr/lib/android-sdk/tools/bin/ \
+    && rm -rf tools sdk-tools-linux-4333796.zip
+run flutter doctor
